@@ -1,0 +1,92 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 100vh;
+    border-left: 1px solid #eff3f4;
+    border-right: 1px solid #eff3f4;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 16px;
+    border-bottom: 1px solid #eff3f4;
+    z-index: 10;
+}
+
+.headerTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid #eff3f4;
+    gap: 12px;
+    transition: background-color 0.2s;
+}
+
+.post:hover {
+    background-color: #f7f9f9;
+}
+
+/* 添付画像の黒四角アイコンを再現 */
+.avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #0f1419;
+    border-radius: 4px; /* 丸にしたい場合は 50% */
+    flex-shrink: 0;
+}
+
+.postBody {
+    flex: 1;
+    min-width: 0; /* Flexbox内でのテキスト折り返し用 */
+}
+
+.postMeta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.authorName {
+    font-weight: bold;
+    color: #0f1419;
+    background-color: #0f1419; /* 名前部分を黒塗りするスタイル（スクリーンショット準拠） */
+    color: transparent;
+    padding: 0 4px;
+}
+
+.date {
+    color: #536471;
+    font-size: 0.9rem;
+    margin-left: 4px;
+}
+
+.content {
+    color: #0f1419;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap; /* 改行を反映 */
+}
+
+.loader,
+.endMessage {
+    padding: 24px;
+    text-align: center;
+    color: #536471;
+    font-size: 0.9rem;
+}
